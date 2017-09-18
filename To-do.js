@@ -13,25 +13,13 @@ function closeBtn() {
 
 //点击关闭按钮清除一项
 
-function closeElement(){
+function closeElement() {
     var close=document.getElementsByClassName("close");
     for (i=0;i<close.length;i++){
         close[i].onclick=function(){
             var parent=this.parentElement;
             parent.style.display="none";
         }
-    }
-}
-
-//给li加入修改按钮
-function setBtn(){
-    var mylist = document.getElementsByTagName("li");
-    for (i = 0; i < mylist.length; i++) {
-      var span = document.createElement("span");
-      var txt = document.createTextNode("\u2606"); 
-      span.className = "set";
-      span.appendChild(txt);
-      mylist[i].appendChild(span);
     }
 }
 
@@ -70,7 +58,6 @@ function newElement(){
 function initList(){
     closeBtn();
     closeElement();
-    setBtn();
     ifChecked();
 }
 
